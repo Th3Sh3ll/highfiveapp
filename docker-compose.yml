@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  highfiveapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: highfiveapp
+    volumes:
+      - .:/HighFiveApp
+    ports:
+      - "80:80"
+    command: ['./startApp.sh']

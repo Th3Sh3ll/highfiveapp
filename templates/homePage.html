@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{url_for ('static', filename='script.js')}}" > </script>    
+    <title>High Five A Legend</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="container">
+            <h3>High Five A Legend!</h3>
+            <hr>
+            <p>Let someone know that they are awesome!</p>
+            <p>Select an engineer to high five:</p>
+
+            <form id="highFiveForm">
+                <div class="radio-group">
+                    <label><input type="radio" name="recipient" value="teamMember1"> teamMember1</label>
+                    <label><input type="radio" name="recipient" value="teamMember2"> teamMember2</label>
+                </div>
+
+                <button type="button" id="highFiveBtn">Send High Five</button>
+            </form>
+        </div>
+
+        <div class="iframe-container">
+            <iframe 
+                id="grafanaDashboard"
+                width="100%"
+                height="600px"
+                frameborder="0">
+            </iframe>
+        </div>
+
+    </div>
+</body>
+</html>
